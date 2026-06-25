@@ -379,6 +379,33 @@ header {
 /* ── Footer ── */
 footer { background: var(--bg-dark) !important; }
 
+/* ── Hero photo ── */
+.hero-photo-wrap {
+    position: relative;
+}
+.hero-photo-wrap::before {
+    content: '';
+    position: absolute;
+    inset: -6px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(79,93,232,0.5), rgba(79,93,232,0.05));
+    z-index: 0;
+}
+.hero-photo {
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top center;
+    position: relative;
+    z-index: 1;
+    border: 3px solid rgba(79, 93, 232, 0.4);
+    display: block;
+}
+@media (min-width: 768px) {
+    .hero-photo { width: 280px; height: 280px; }
+}
+
 /* ── Header scrolled ── */
 .header-scrolled {
     box-shadow: 0 2px 16px rgba(13, 17, 23, 0.1);
